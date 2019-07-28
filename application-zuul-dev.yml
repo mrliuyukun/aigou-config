@@ -1,0 +1,13 @@
+
+server:
+  port: 2000
+spring:
+  application:
+    name: zuul-server
+zuul:
+  ignoredServices: '*'
+  routes:
+    plat:
+      path: /plan/** #平台服务的请求路径
+      serviceId: plan-service
+  prefix: /services #请求前缀
